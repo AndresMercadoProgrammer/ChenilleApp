@@ -6,7 +6,7 @@ import sortMenuSlices from "./sortMenuShop/sortMenuSlice"
 import MenuHeaderSlice from "./MenuHeaderSlice/menuHeaderSlice"
 import cartSlice from "./CartSlice/CartSlice"
 import searchSlice from "./SearchSlice/SearchSlice"
-import categoriesSlices from "./categoriesSlice/CategoriesSlice"
+import categoriesSlices from "./CategoriesSlice/CategoriesSlice"
 import AuthSlice from "./AuthSlice/AuthSlice"
 
 

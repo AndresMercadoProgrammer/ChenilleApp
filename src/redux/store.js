@@ -8,6 +8,7 @@ import cartSlice from "./CartSlice/CartSlice"
 import searchSlice from "./SearchSlice/SearchSlice"
 import categoriesSlices from "./CategoriesSlice/CategoriesSlice"
 import AuthSlice from "./AuthSlice/AuthSlice"
+import toggleCartSlice from "./ToggleCartSlice/ToggleCartSlice"
 
 
 
@@ -17,14 +18,14 @@ const reducers = combineReducers({
     menuHeaderSlice: MenuHeaderSlice,
     cartSlice: cartSlice,
     searchSlice: searchSlice,
-    authSlice: AuthSlice
-
+    authSlice: AuthSlice,
+    toggleCart: toggleCartSlice
 });
 
 const persistConfig = {
     key: "root",
     storage,
-    whitelist: ['categoriesReducer', 'cartSlice'],
+    whitelist: ['categories', 'cartSlice'],
 
 };
 

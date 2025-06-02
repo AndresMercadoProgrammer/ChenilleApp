@@ -9,7 +9,7 @@ import { BiCart, BiHeart } from "react-icons/bi";
 import { ButtonCircle } from "../UI/Buttons/ButtonCircle/ButtonCircle";
 import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleCart } from "../../redux/CartSlice/CartSlice";
+import { toggleCart } from "../../redux/ToggleCartSlice/ToggleCartSlice";
 import SearchBar from "../SearchBar/SearchBar";
 import { PiUserCircleFill } from "react-icons/pi";
 
@@ -29,11 +29,11 @@ export const Navbar = () => {
         </ContainerNavbar>
 
         <IconsContainerStyled>
-          <NavLink onClick={() => dispatch(toggleCart())} to="#">
+          <p onClick={() => dispatch(toggleCart())}>
             <ButtonCircle $bkg="black">
               <BiCart className="cart_icon" />
             </ButtonCircle>
-          </NavLink>
+          </p>
           <NavLink to="#">
             <ButtonCircle $bkg="tomato">
               <BiHeart className="heart_icon" />

@@ -46,7 +46,7 @@ overflow: auto;
 z-index: 1000;
 background-color:white;
 top: 0;
-right: ${({ $active }) => $active ? '-32%' : '0%'};
+right: ${({ $active }) => $active ? '0%' : '-32%'};
 transition: right 1s ease;
 
 box-shadow: -1px 0px 10px black;

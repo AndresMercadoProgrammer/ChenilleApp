@@ -8,17 +8,21 @@ import {
   CloseButtonStyled,
 } from "./CartStyles";
 import { useDispatch, useSelector } from "react-redux";
-import { clearCart, toggleCart } from "../../redux/CartSlice/CartSlice";
+import { clearCart } from "../../redux/CartSlice/CartSlice";
 import { CartCardList } from "./CartCardList";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { totalCostProducts, totalMount } from "../../Utils/CartUtils/CartUtils";
 import { SHIPPING_COST } from "../../Utils/CartUtils/ShippingCost";
 import { SlClose } from "react-icons/sl";
+import { toggleCart } from "../../redux/ToggleCartSlice/ToggleCartSlice";
+
 export const Cart = () => {
-  const { active, blurActive, cartItems } = useSelector((state) => {
+  const { cartItems } = useSelector((state) => {
     return state.cartSlice;
   });
 
+  const { active } = useSelector((state) => state.toggleCart);
+  console.log(active);
   const dispatch = useDispatch();
 
   const handleClearCart = () => {
@@ -27,9 +31,9 @@ export const Cart = () => {
 
   return (
     <>
-      {blurActive && (
+      {/*  {active && (
         <EffectBlur onClick={() => dispatch(toggleCart())}></EffectBlur>
-      )}
+      )} */}
       <CartStyled $active={active}>
         <CloseButtonStyled
           initial={{ scale: 1 }}

@@ -5,7 +5,7 @@ import {
 } from "./TitleProductSeccionStyles";
 import { useSelector } from "react-redux";
 
-const TitleProductSection = () => {
+export const TitleProductSection = () => {
   const { selectedCategories } = useSelector((state) => state.categories);
 
   const title = selectedCategories;
@@ -17,5 +17,3 @@ const TitleProductSection = () => {
     </>
   );
 };
-
-export default TitleProductSection;

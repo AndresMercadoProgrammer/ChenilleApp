@@ -31,9 +31,7 @@ export const Cart = () => {
 
   return (
     <>
-      {/*  {active && (
-        <EffectBlur onClick={() => dispatch(toggleCart())}></EffectBlur>
-      )} */}
+      {active && <EffectBlur onClick={() => dispatch(toggleCart())} />}
       <CartStyled $active={active}>
         <CloseButtonStyled
           initial={{ scale: 1 }}

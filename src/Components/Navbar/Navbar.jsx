@@ -4,7 +4,7 @@ import {
   IconsContainerStyled,
   NavContainerStyled,
 } from "./NavbarStyles";
-import { IconButton } from "@chakra-ui/react";
+import { Button, IconButton } from "@chakra-ui/react";
 import { BiCart, BiHeart } from "react-icons/bi";
 import { ButtonCircle } from "../UI/Buttons/ButtonCircle/ButtonCircle";
 import { NavLink } from "react-router-dom";
@@ -29,11 +29,11 @@ export const Navbar = () => {
         </ContainerNavbar>
 
         <IconsContainerStyled>
-          <p onClick={() => dispatch(toggleCart())}>
+          <Button onClick={() => dispatch(toggleCart())}>
             <ButtonCircle $bkg="black">
               <BiCart className="cart_icon" />
             </ButtonCircle>
-          </p>
+          </Button>
           <NavLink to="#">
             <ButtonCircle $bkg="tomato">
               <BiHeart className="heart_icon" />

@@ -6,7 +6,7 @@ import {
 } from "./ShopStyles";
 
 import { SortProducts } from "../../Components/SortProducts/SortProducts";
-import TitleProductSection from "../../Components/ShopSections/TitleProductSection";
+import { TitleProductSection } from "../../Components/ShopSections/TitleProductSection";
 import { DescriptionCategory } from "../../Components/ShopSections/DescriptionCategory";
 import { CardProduct } from "../../Components/CardProduct/CardProduct";
 

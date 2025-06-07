@@ -29,13 +29,13 @@ export const Navbar = () => {
         </ContainerNavbar>
 
         <IconsContainerStyled>
-          <Button onClick={() => dispatch(toggleCart())}>
-            <ButtonCircle $bkg="black">
+          <NavLink onClick={() => dispatch(toggleCart())} to="#">
+            <ButtonCircle $bkg="#504344">
               <BiCart className="cart_icon" />
             </ButtonCircle>
-          </Button>
+          </NavLink>
           <NavLink to="#">
-            <ButtonCircle $bkg="tomato">
+            <ButtonCircle $bkg="#504344">
               <BiHeart className="heart_icon" />
             </ButtonCircle>
           </NavLink>
@@ -45,7 +45,9 @@ export const Navbar = () => {
             </IconButton>
           ) : (
             <NavLink to="/Login">
-              <ButtonCircle $bkg="black">Login / Register</ButtonCircle>
+              <ButtonCircle $bkg="#272122" $color="white" $border="">
+                Login / Register
+              </ButtonCircle>
             </NavLink>
           )}
         </IconsContainerStyled>

@@ -4,7 +4,7 @@ import {
   ContactTitleStyled,
   SubmitButton,
 } from "./ContactStyles";
-import { Instructions } from "../../Components/CardForm/FormStyles";
+import { Instructions } from "../../Components/Forms/FormStyles";
 import { Formik } from "formik";
 import { contactInitialValues } from "../../Formik/initialValues";
 import { contactValidationSchema } from "../../Formik/validationSchema";

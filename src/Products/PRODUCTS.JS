@@ -137,7 +137,7 @@ export const stock = [
         material: 'Sillas y Mesa Plastica',
         price_normal: 80000,
         discount: 12,
-        img: 'https://res.cloudinary.com/dcb95uryz/image/upload/v1748840417/3_dfexfe.jpgg',
+        img: 'https://res.cloudinary.com/dcb95uryz/image/upload/v1748840417/3_dfexfe.jpg',
         category: ['exterior', 'Mesas de Exterior', 'Sillas de Exterior'],
         id: 13,
     },

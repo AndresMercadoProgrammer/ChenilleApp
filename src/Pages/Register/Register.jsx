@@ -5,7 +5,7 @@ import {
   Instructions,
   LoginButton,
   TitleRegister,
-} from "../../Components/CardForm/FormStyles";
+} from "../../Components/Forms/FormStyles";
 import { NavLink } from "react-router-dom";
 import { Formik } from "formik";
 import { registerInitialValues } from "../../Formik/initialValues";
@@ -17,52 +17,56 @@ export const Register = () => {
       <Formik
         initialValues={registerInitialValues}
         validationSchema={registerValidationSchema}
-        onSubmit={(values) => {
-          console.log(values);
-        }}
+        onSubmit={(values) => {}}
       >
         <CardFormContainerStyled>
           <CardFormRegister>
             <TitleRegister>Register</TitleRegister>
-            <Instructions>Please complete the Form!</Instructions>
+
             <FormInput
               name="name"
               label="Nombre"
-              placeholder="Name"
+              placeholder="name"
             ></FormInput>
             <FormInput
               name="lastName"
               label="Apellido"
-              placeholder="Lastname"
+              placeholder="lastname"
             ></FormInput>
             <FormInput
               name="email"
               type="email"
               label="Email"
               id=""
-              placeholder="Email"
+              placeholder="email"
             ></FormInput>
             <FormInput
               name="password"
               type="password"
-              placeholder="New Pass"
+              placeholder="password"
               label="Password"
             ></FormInput>
             <FormInput
               name="repassword"
               type="password"
-              placeholder="Repeat password"
+              placeholder="repeat password"
               label="RePassword"
             ></FormInput>
             <Instructions>
               <label htmlFor="checkboxRules">
-                <FormInput type="checkbox" name="checkboxRules" id="" />I have
-                read and I accept the terms and conditions.
+                <FormInput
+                  type="checkbox"
+                  name="checkboxRules"
+                  id="termsAndConditions"
+                />
+                I have read and I accept the terms and conditions.
               </label>
             </Instructions>
             <Instructions>
               <span>If you have an account </span>
-              <NavLink className="sign_In">Sign In</NavLink>
+              <NavLink className="sign_In" to="/login">
+                Sign In
+              </NavLink>
             </Instructions>
             <LoginButton>Register</LoginButton>
           </CardFormRegister>

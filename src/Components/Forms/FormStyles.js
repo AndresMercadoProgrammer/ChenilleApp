@@ -2,37 +2,33 @@ import { Form } from "formik";
 import styled from "styled-components";
 
 export const CardFormContainerStyled = styled.div`
-margin: 10% 15%;
+margin: 5% 15%;
 width: 80%;
-padding: 2rem;
+padding: 1rem;
 display: flex;
 justify-content: center;
-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-overflow: hidden;
 position: relative;
-
+ 
 `
 
 //  LOGIN //
 
 export const CardFormLogin = styled(Form)`
-width: 100%;
-height: 100%;
+width: 50%;
+padding: 40px;
+border-radius: 10px;
 display: flex;
 flex-direction: column;
 justify-content: center; 
 align-items: center;
 gap: 8px;
-background-color:white;
+background-color: #cac2be;
 position: relative;
-
 
 `
 
-
-
 export const TitleLogin = styled.h2`
-color: gray;
+color: #272122;
 font-size: large;
 
 `
@@ -41,7 +37,7 @@ export const Instructions = styled.p`
 color: #004  ;
 font-size: small;
 font-weight: 400;
-padding: 15px;
+
 
 
 `
@@ -49,11 +45,11 @@ export const InputUser = styled.input`
 text-align:center;
 background-color: transparent;
 padding: 4px 5px;
-border: 2px tomato solid;
+border: 2px #504344 solid;
 font-size: 12px;
 
     &::placeholder {
-        color: #bdbdbd;
+        color:#94807b;
         font-size: 12px;;
     }
 &:focus {
@@ -72,38 +68,37 @@ export const InputPass = styled(InputUser)`
 `
 
 export const ForgotPass = styled.p`
-color: tomato;
+color: 504344;
 font-size: .9em;
 margin: 8px;
 text-decoration: underline ;
 `
 
 export const LoginButton = styled.button`
-color:tomato;
-border: 1px black solid;
+color:white;
+background-color:#504344;
 border-radius: 20px;
 padding: 5px 30px;
 
 `
 //  REGISTER //
 
-export const CardFormRegister = styled.div`
-width: 100%;
-height: 100%;
-display: flex;
-flex-direction: column;
-justify-content: center; 
-align-items: center;
-gap: 8px;
-background-color:white;
-position: relative;
+export const CardFormRegister = styled(CardFormLogin)`
+width: 65%;
+padding:30px 20px;
 
+.sign_In {
+    color:#504344;
+    font-weight: 700;
+}
 
-
+#termsAndConditions {
+    
+}
 `
 
 export const TitleRegister = styled(TitleLogin)`
-margin-top: 10px;
+
 
 `
 

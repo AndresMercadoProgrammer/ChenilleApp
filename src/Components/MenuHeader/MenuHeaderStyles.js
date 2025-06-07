@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContainerMenu = styled.div`
   display: flex;
   width: 100%;
-  background-color: black;
+  background-color: #473c3e;
   color: white;
   position: relative;
   justify-content: center;
@@ -48,6 +48,7 @@ export const ListContainer = styled.ul`
   top: 103%;
   text-align: center;
   z-index: 200;
+  background-color: #473c3e;
   
  
 
@@ -56,7 +57,7 @@ export const ListContainer = styled.ul`
 export const ListItem = styled.li`
   text-align: start;
   color: black;
-  background-color: #dadae3;
+
   padding: 8px 8px 8px 8px;
  font-size: small;
  z-index: 200;

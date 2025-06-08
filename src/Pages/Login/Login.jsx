@@ -4,32 +4,41 @@ import {
   CardFormContainerStyled,
   CardFormLogin,
   ForgotPass,
-  InputPass,
-  InputUser,
   Instructions,
   LoginButton,
   TitleLogin,
-} from "../../Components/Forms/FormStyles";
+} from "../../Components/UI/FormInput/FormInputStyles";
 import { NavLink } from "react-router-dom";
 import { Formik } from "formik";
+import { loginInitialValues } from "../../Formik/initialValues";
+import { loginValidationSchema } from "../../Formik/validationSchema";
+import { FormInput } from "../../Components/UI/FormInput/FormInput";
 
 export const Login = () => {
   return (
     <>
-      <Formik>
+      <Formik
+        initialValues={loginInitialValues}
+        validationSchema={loginValidationSchema}
+        onSubmit={(values) => {}}
+      >
         <CardFormContainerStyled>
           <CardFormLogin>
             <TitleLogin>SIGN IN</TitleLogin>
             <Instructions>Please enter your login and password!</Instructions>
-            <InputUser placeholder="username"></InputUser>
-            <InputPass type="password" placeholder="password"></InputPass>
+            <FormInput name="username" placeholder="username"></FormInput>
+            <FormInput
+              name="password"
+              type="password"
+              placeholder="password"
+            ></FormInput>
             <ForgotPass>
               <NavLink to="#">Forgot your pass?</NavLink>
             </ForgotPass>
             <NavLink to="/register">
               you dont have an account? Register Here
             </NavLink>
-            <LoginButton>Login</LoginButton>
+            <LoginButton type="submit">Login</LoginButton>
           </CardFormLogin>
         </CardFormContainerStyled>
       </Formik>

@@ -18,10 +18,10 @@ export const CardProduct = () => {
     <>
       {filters == false
         ? arrayProducts.map((product) => {
-            return CardProductMap(product);
+            return <CardProductMap product={product} />;
           })
         : productsFiltered.map((product) => {
-            return CardProductMap(product);
+            return <CardProductMap key={product.id} product={product} />;
           })}
 
       {}

@@ -13,6 +13,7 @@ export const toggleCartSlice = createSlice({
             return {
                 ...state,
                 active: !state.active,
+
             }
         }
     }

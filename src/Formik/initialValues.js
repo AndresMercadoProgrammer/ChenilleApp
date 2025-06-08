@@ -12,3 +12,8 @@ export const registerInitialValues = {
     password: '',
     repassword: '',
 }
+
+export const loginInitialValues = {
+    username: '',
+    password: '',
+}

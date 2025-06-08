@@ -5,7 +5,7 @@ import {
   Instructions,
   LoginButton,
   TitleRegister,
-} from "../../Components/Forms/FormStyles";
+} from "../../Components/UI/FormInput/FormInputStyles";
 import { NavLink } from "react-router-dom";
 import { Formik } from "formik";
 import { registerInitialValues } from "../../Formik/initialValues";
@@ -68,7 +68,7 @@ export const Register = () => {
                 Sign In
               </NavLink>
             </Instructions>
-            <LoginButton>Register</LoginButton>
+            <LoginButton type="submit">Register</LoginButton>
           </CardFormRegister>
         </CardFormContainerStyled>
       </Formik>

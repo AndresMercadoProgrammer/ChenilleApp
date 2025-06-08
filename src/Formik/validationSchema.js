@@ -10,7 +10,11 @@ export const contactValidationSchema = Yup.object({
 export const registerValidationSchema = Yup.object({
     name: Yup.string().trim().required('Este campo es requerido'),
     lastName: Yup.string().trim().required('Campo Requerido'),
-    email: Yup.string().email('Introduzca un Email Valido'),
-    password: Yup.string().min(6, 'Minimo 6 caracteres').max(12, 'Maximo 12 caracteres'),
+    email: Yup.string().email('Introduzca un Email Valido').required('Este campo es requerido'),
     repassword: Yup.string().oneOf([Yup.ref('password')], ' Las contraseñas no coinciden').required('Campo Requerido')
+})
+
+export const loginValidationSchema = Yup.object({
+    username: Yup.string().trim().required('Este campo es requerido'),
+    password: Yup.string().min(6, 'Minimo 6 caracteres').max(12, 'Maximo 12 caracteres').required('Este campo es requerido'),
 })

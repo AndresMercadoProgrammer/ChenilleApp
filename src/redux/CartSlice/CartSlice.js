@@ -18,8 +18,7 @@ export const cartSlice = createSlice({
             return {
                 ...state,
                 cartItems: addToCartItem(prevState, producto),
-                active: true,
-                blurActive: true
+
             }
 
 

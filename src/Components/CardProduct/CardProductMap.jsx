@@ -13,10 +13,10 @@ import {
 } from "@chakra-ui/react";
 import { addToCart } from "../../redux/CartSlice/CartSlice";
 import { useDispatch } from "react-redux";
+import { toggleCart } from "../../redux/ToggleCartSlice/ToggleCartSlice";
 
-export const CardProductMap = (product) => {
-  const { name, description, material, price_normal, discount, img, id } =
-    product;
+export const CardProductMap = ({ product }) => {
+  const { name, description, price_normal, img, id } = product;
   const dispatch = useDispatch();
 
   return (
@@ -50,7 +50,10 @@ export const CardProductMap = (product) => {
             Buy now
           </Button>
           <Button
-            onClick={() => dispatch(addToCart(product))}
+            onClick={() => {
+              dispatch(addToCart(product));
+              dispatch(toggleCart());
+            }}
             variant="ghost"
             colorScheme="blue"
           >

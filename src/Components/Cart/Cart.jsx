@@ -22,7 +22,6 @@ export const Cart = () => {
   });
 
   const { active } = useSelector((state) => state.toggleCart);
-  console.log(active);
   const dispatch = useDispatch();
 
   const handleClearCart = () => {

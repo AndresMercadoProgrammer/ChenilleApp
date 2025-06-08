@@ -28,10 +28,12 @@ export const searchSlice = createSlice({
         }
         ,
         updateResults: (state, action) => {
+            const query = action.payload;
 
             return {
                 ...state,
-                searchResults: filterStockItems(action.payload)
+                isOpen: query.length > 2 ? true : false,
+                searchResults: filterStockItems(query)
             }
         },
     }

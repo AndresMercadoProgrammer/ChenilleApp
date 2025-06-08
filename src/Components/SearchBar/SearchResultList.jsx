@@ -10,11 +10,15 @@ export const SearchResulstList = () => {
   return (
     <>
       <SearchResultsContainer>
-        {results.map((product) => (
-          <ProductMiniCard>
-            <p>{product.name}</p>
-          </ProductMiniCard>
-        ))}
+        {results.length === 0 ? (
+          <p>No hay productos que coincidan con tu búsqueda.</p>
+        ) : (
+          results.map((product) => (
+            <ProductMiniCard>
+              <p>{product.name}</p>
+            </ProductMiniCard>
+          ))
+        )}
       </SearchResultsContainer>
     </>
   );

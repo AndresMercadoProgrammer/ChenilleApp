@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { SearchContainer, SearchInput, ButtonSearch } from "./SearchStyles";
 import { GrSearch } from "react-icons/gr";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,18 +8,17 @@ import {
 import { SearchResulstList } from "./SearchResultList";
 
 const SearchBar = () => {
-  const searchQuery = useSelector((state) => state.searchSlice.searchQuery);
-  const isOpen = useSelector((state) => state.searchSlice.isOpen);
+  const { isOpen, searchQuery, searchResults } = useSelector(
+    (state) => state.searchSlice
+  );
+
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    if (searchQuery.length >= 3) {
-      dispatch(updateResults(searchQuery));
-    }
-  }, [searchQuery]);
-
   const handleSearchChange = (e) => {
-    dispatch(updateQuery(e.target.value));
+    const inputValue = e.target.value;
+
+    dispatch(updateQuery(inputValue));
+    dispatch(updateResults(inputValue));
   };
 
   return (

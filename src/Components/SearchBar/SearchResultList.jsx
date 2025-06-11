@@ -1,11 +1,10 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { ProductMiniCard, SearchResultsContainer } from "./SearchStyles";
+import { NavLink } from "react-router-dom";
 
 export const SearchResulstList = () => {
   const results = useSelector((state) => state.searchSlice.searchResults);
-
-  const dispatch = useDispatch();
 
   return (
     <>
@@ -14,8 +13,8 @@ export const SearchResulstList = () => {
           <p>No hay productos que coincidan con tu búsqueda.</p>
         ) : (
           results.map((product) => (
-            <ProductMiniCard>
-              <p>{product.name}</p>
+            <ProductMiniCard key={product.id}>
+              <NavLink>{product.name}</NavLink>
             </ProductMiniCard>
           ))
         )}

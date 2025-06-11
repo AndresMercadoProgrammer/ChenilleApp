@@ -54,7 +54,7 @@ export const MenuHeader = () => {
                           <NavLink
                             key={muebleSelected}
                             className="navlink"
-                            to="/shop"
+                            to={`/shop/${nombre}`}
                           >
                             <ListItem>{muebleSelected}</ListItem>
                           </NavLink>

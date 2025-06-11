@@ -27,7 +27,11 @@ export const Routes = () => {
         <ReactDomRoutes>
           <Route path="*" element={<p>Error</p>} />
           <Route path="/" element={<Home />} />
-          <Route path="Shop" element={<Shop />} />
+          <Route path="shop">
+            <Route index element={<Shop />} />
+            <Route path=":category" element={<Shop />} />
+          </Route>
+
           <Route path="Login" element={<Login />} />
           <Route path="Register" element={<Register />} />
           <Route path="MyAccount" element={<Account />} />

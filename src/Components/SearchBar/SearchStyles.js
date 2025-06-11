@@ -18,6 +18,11 @@ color: rgba(0, 0, 0, 0.87);
 border-color: #949494;
 position: relative;
 
+
+ .restartSearch {
+   font-size:1.7rem
+
+}
 `
 
 export const SearchInput = styled.input`
@@ -62,4 +67,7 @@ background-color: white;
 
 export const ProductMiniCard = styled.div`
 width: 100%;
+padding: 2px;
+
+
 `

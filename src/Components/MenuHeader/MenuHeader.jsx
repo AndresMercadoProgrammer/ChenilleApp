@@ -42,7 +42,10 @@ export const MenuHeader = () => {
               key={category}
               onClick={(e) => handleClickSelectCategory(e)}
             >
-              <NavLink className="first_nav_link" to="/shop">
+              <NavLink
+                className="first_nav_link"
+                to={`/shop/${category.toLowerCase()}`}
+              >
                 {category}
               </NavLink>
               {isOpen && menuSelected === category && (
@@ -54,7 +57,7 @@ export const MenuHeader = () => {
                           <NavLink
                             key={muebleSelected}
                             className="navlink"
-                            to={`/shop/${nombre}`}
+                            to={`/shop/${muebleSelected}`}
                           >
                             <ListItem>{muebleSelected}</ListItem>
                           </NavLink>

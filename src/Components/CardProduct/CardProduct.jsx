@@ -1,30 +1,26 @@
 import React from "react";
-import { CardProductMap } from "./CardProductMap";
-import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
+
 import { stock } from "../../Products/PRODUCTS.JS";
+import { CardProductMap } from "./CardProductMap";
+
 export const CardProduct = () => {
-  const arrayProducts = stock;
+  const { category } = useParams(); // obtenés la categoría desde la URL
 
-  const { filters, selectedCategories } = useSelector(
-    (state) => state.categories
-  );
-
-  const productsFiltered = arrayProducts.filter((product) => {
-    const productsLowerCase = product.category.map((e) => e.toLowerCase());
-    return productsLowerCase.includes(selectedCategories.toLowerCase());
-  });
+  // Filtrás los productos si hay categoría en la URL
+  const productsToShow = category
+    ? stock.filter((product) =>
+        product.category
+          .map((c) => c.toLowerCase())
+          .includes(category.toLowerCase())
+      )
+    : stock;
 
   return (
     <>
-      {filters == false
-        ? arrayProducts.map((product) => {
-            return <CardProductMap product={product} />;
-          })
-        : productsFiltered.map((product) => {
-            return <CardProductMap key={product.id} product={product} />;
-          })}
-
-      {}
+      {productsToShow.map((product) => (
+        <CardProductMap key={product.id} product={product} />
+      ))}
     </>
   );
 };
